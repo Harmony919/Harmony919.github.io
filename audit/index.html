@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Harmony Studio Product Audit Package</title>
+<style>
+  :root{--bg:#faf8f4;--fg:#1c1c1c;--muted:#6b6b66;--line:#e6e2da;--accent:#4a5d4a;--warn:#a15d2c;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 -apple-system,BlinkMacSystemFont,'Segoe UI',Inter,sans-serif;}
+  main{max-width:960px;margin:0 auto;padding:40px 24px 80px}
+  h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;margin:0 0 4px;letter-spacing:-0.5px}
+  h2{font-size:18px;margin:32px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line);letter-spacing:.02em;text-transform:uppercase;color:var(--accent)}
+  p.lead{color:var(--muted);margin:0 0 24px;max-width:640px}
+  .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  ul.files{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+  ul.files li{border:1px solid var(--line);background:#fff;border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+  ul.files a{color:var(--fg);text-decoration:none;font-weight:500}
+  ul.files a:hover{text-decoration:underline}
+  ul.files .fmt{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:2px 6px;border-radius:4px}
+  .grid2{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin:8px 0 0}
+  .stat{border:1px solid var(--line);background:#fff;border-radius:8px;padding:12px 14px}
+  .stat .n{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;line-height:1}
+  .stat .l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+  .note{background:#fff7ea;border:1px solid #ecd6ae;color:#6a4b1b;border-radius:8px;padding:12px 14px;font-size:13px;margin:12px 0}
+  .brand-list{columns:2;gap:20px;font-size:13px;color:var(--muted)}
+  code{background:#f0ede6;padding:1px 6px;border-radius:4px;font-size:12px}
+  footer{color:var(--muted);font-size:12px;margin-top:48px;border-top:1px solid var(--line);padding-top:14px}
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Harmony Studio</div>
+  <h1>Product Audit Package</h1>
+  <p class="lead">Read-only exports of the Harmony Studio catalog, pricing, images, data quality, page inventory, and permission model. Generated for external UX / product / data review. Contains no customer PII, credentials, or destructive controls.</p>
+
+  <div class="note">
+    <strong>Screenshot package:</strong> not captured in this run — the sandbox browser had no signed-in Studio session. Sign into the Studio preview once and request a screenshot refresh; authenticated Playwright captures for /studio/dashboard, /studio/products, /studio/brands, and sample product detail pages (desktop / tablet / mobile) can then be produced.
+  </div>
+
+  <h2>Summary</h2>
+  <div class="grid2" id="stats"></div>
+
+  <h2>Brand coverage</h2>
+  <div class="brand-list" id="brands"></div>
+
+  <h2>Catalog exports</h2>
+  <ul class="files">
+    <li><a href="./harmony-studio-products.csv">Product catalog</a><span class="fmt">CSV</span></li>
+    <li><a href="./harmony-studio-products.json">Product catalog</a><span class="fmt">JSON</span></li>
+  </ul>
+
+  <h2>Image audit</h2>
+  <ul class="files">
+    <li><a href="./harmony-studio-image-audit.csv">Image audit</a><span class="fmt">CSV</span></li>
+    <li><a href="./harmony-studio-image-audit.json">Image audit</a><span class="fmt">JSON</span></li>
+  </ul>
+
+  <h2>Pricing audit</h2>
+  <ul class="files">
+    <li><a href="./harmony-studio-pricing-audit.csv">Pricing audit</a><span class="fmt">CSV</span></li>
+    <li><a href="./harmony-studio-pricing-audit.json">Pricing audit</a><span class="fmt">JSON</span></li>
+  </ul>
+
+  <h2>Data quality audit</h2>
+  <ul class="files">
+    <li><a href="./harmony-studio-data-quality-audit.csv">Data quality audit</a><span class="fmt">CSV</span></li>
+    <li><a href="./harmony-studio-data-quality-audit.json">Data quality audit</a><span class="fmt">JSON</span></li>
+  </ul>
+
+  <h2>Page inventory</h2>
+  <ul class="files">
+    <li><a href="./harmony-studio-page-inventory.csv">Page inventory</a><span class="fmt">CSV</span></li>
+    <li><a href="./harmony-studio-page-inventory.json">Page inventory</a><span class="fmt">JSON</span></li>
+  </ul>
+
+  <h2>Permission summary</h2>
+  <ul class="files">
+    <li><a href="./harmony-studio-audit-permissions.json">Audit Reviewer role &amp; blocked actions</a><span class="fmt">JSON</span></li>
+  </ul>
+
+  <h2>Public site comparison</h2>
+  <ul class="files">
+    <li><a href="./harmony-studio-public-site-comparison.csv">Studio vs public site (Studio-side fields)</a><span class="fmt">CSV</span></li>
+    <li><a href="./harmony-studio-public-site-comparison.json">Studio vs public site (Studio-side fields)</a><span class="fmt">JSON</span></li>
+  </ul>
+
+  <h2>Summary machine-readable</h2>
+  <ul class="files">
+    <li><a href="./summary.json">Full run summary</a><span class="fmt">JSON</span></li>
+  </ul>
+
+  <h2>Export limitations</h2>
+  <ul id="lims" style="color:var(--muted);font-size:13px"></ul>
+
+  <footer>
+    Generated <span id="ts"></span> · Public read-only URL: <code>/audit/index.html</code>. Contains no secrets, PII, dealer cost, or margin data. Any product/brand detail pages linked to internal Studio routes require a signed-in Audit Reviewer session.
+  </footer>
+</main>
+<script>
+fetch('./summary.json').then(r=>r.json()).then(s=>{
+  const stats = [
+    ['Total active products', s.total_active_products],
+    ['Brands total', s.brands_total],
+    ['Brands with products', s.brands_with_products],
+    ['Products missing image', s.products_missing_image],
+    ['Products missing pricing', s.products_missing_pricing],
+    ['Products not public-ready', s.products_not_public_ready],
+    ['Products public-ready', s.public_ready_products],
+  ];
+  document.getElementById('stats').innerHTML = stats.map(([l,n])=>`<div class="stat"><div class="n">${n.toLocaleString()}</div><div class="l">${l}</div></div>`).join('');
+  document.getElementById('brands').innerHTML = s.brand_breakdown.map(b=>`<div>${b.brand} <span style="color:#999">· ${b.count.toLocaleString()}</span></div>`).join('');
+  document.getElementById('lims').innerHTML = s.export_limitations.map(l=>`<li>${l}</li>`).join('');
+  document.getElementById('ts').textContent = new Date(s.generated_at).toLocaleString();
+});
+</script>
+</body>
+</html>

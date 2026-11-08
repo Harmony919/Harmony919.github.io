@@ -1,0 +1,209 @@
+[
+  {
+    "route": "/studio",
+    "page_title": "Dashboard",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Consultant home / KPIs",
+    "key_components": "Pipeline, personal metrics, today, leaderboard",
+    "blocked_actions": "All write actions",
+    "limitations": "None"
+  },
+  {
+    "route": "/studio/audit-access",
+    "page_title": "Audit Reviewer Overview",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Audit landing page with role summary + test links",
+    "key_components": "Access lists, test links",
+    "blocked_actions": "N/A",
+    "limitations": "Reviewer-only helper page"
+  },
+  {
+    "route": "/studio/products",
+    "page_title": "Products",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Product catalog browse",
+    "key_components": "Grid, filters, search, brand facets",
+    "blocked_actions": "Edit/Delete/Import",
+    "limitations": "None"
+  },
+  {
+    "route": "/studio/products/:slug",
+    "page_title": "Product Detail",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Product spec + pricing + images",
+    "key_components": "Hero, specs, pricing rows, related",
+    "blocked_actions": "Edit fields, upload images",
+    "limitations": "None"
+  },
+  {
+    "route": "/studio/brands",
+    "page_title": "Brands",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Brand directory",
+    "key_components": "Brand cards, launch status",
+    "blocked_actions": "Configure brand",
+    "limitations": "None"
+  },
+  {
+    "route": "/studio/brands/:slug",
+    "page_title": "Brand Detail",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Single brand overview",
+    "key_components": "Products, readiness, collections",
+    "blocked_actions": "Edit brand",
+    "limitations": "None"
+  },
+  {
+    "route": "/studio/collections",
+    "page_title": "Collections",
+    "accessible_to_audit_reviewer": "no",
+    "purpose": "Not a distinct route in current build",
+    "key_components": "N/A",
+    "blocked_actions": "N/A",
+    "limitations": "Collections surface inside brand detail"
+  },
+  {
+    "route": "/studio/quotes",
+    "page_title": "Quotes list",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "All quotes (visible per RLS)",
+    "key_components": "Table + filters",
+    "blocked_actions": "Create/edit/delete quotes",
+    "limitations": "Reviewer sees quotes they have permission to view only"
+  },
+  {
+    "route": "/studio/quotes/:id",
+    "page_title": "Quote Detail",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Individual quote",
+    "key_components": "Line items, totals, pricing",
+    "blocked_actions": "Edit / send / print / delete",
+    "limitations": "None"
+  },
+  {
+    "route": "/studio/quick-quote",
+    "page_title": "Quick Quote",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Fast pricing tool",
+    "key_components": "Configurator",
+    "blocked_actions": "Save/send quote",
+    "limitations": "Configurations are read-only"
+  },
+  {
+    "route": "/studio/proposals",
+    "page_title": "Proposals list",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "All proposals",
+    "key_components": "Table",
+    "blocked_actions": "Create/edit/delete/send",
+    "limitations": "None"
+  },
+  {
+    "route": "/studio/proposals/:id",
+    "page_title": "Proposal Editor",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Proposal viewer",
+    "key_components": "Sections, quote refs",
+    "blocked_actions": "Edit content, send, sign",
+    "limitations": "Reviewer cannot save changes"
+  },
+  {
+    "route": "/studio/design-studio",
+    "page_title": "Design Studio",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "AI visualization workspace",
+    "key_components": "Projects, renders",
+    "blocked_actions": "Create/render",
+    "limitations": "Render jobs blocked (write)"
+  },
+  {
+    "route": "/studio/design",
+    "page_title": "Design Projects",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Project list",
+    "key_components": "Cards",
+    "blocked_actions": "Create/edit",
+    "limitations": "None"
+  },
+  {
+    "route": "/studio/knowledge",
+    "page_title": "Knowledge Center",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Reference docs",
+    "key_components": "Docs list",
+    "blocked_actions": "Upload/edit",
+    "limitations": "None"
+  },
+  {
+    "route": "/studio/reports",
+    "page_title": "Reports",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Sales / catalog reports",
+    "key_components": "Charts",
+    "blocked_actions": "None",
+    "limitations": "Some reports may require manage_reports"
+  },
+  {
+    "route": "/studio/operations",
+    "page_title": "Operations",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Ops overview",
+    "key_components": "Tiles, feed",
+    "blocked_actions": "Edit ops rules",
+    "limitations": "None"
+  },
+  {
+    "route": "/studio/orders",
+    "page_title": "Orders",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Orders list",
+    "key_components": "Table",
+    "blocked_actions": "Edit/create orders",
+    "limitations": "Customer PII limited"
+  },
+  {
+    "route": "/studio/deliveries",
+    "page_title": "Deliveries",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Delivery schedule",
+    "key_components": "Calendar/table",
+    "blocked_actions": "Reschedule",
+    "limitations": "None"
+  },
+  {
+    "route": "/studio/vendors",
+    "page_title": "Vendors",
+    "accessible_to_audit_reviewer": "yes",
+    "purpose": "Vendor directory",
+    "key_components": "Cards",
+    "blocked_actions": "Add/edit vendors",
+    "limitations": "None"
+  },
+  {
+    "route": "/studio/inbox",
+    "page_title": "Inbox",
+    "accessible_to_audit_reviewer": "no",
+    "purpose": "Requires messaging perms",
+    "key_components": "N/A",
+    "blocked_actions": "All",
+    "limitations": "Hidden from reviewer role"
+  },
+  {
+    "route": "/studio/admin/*",
+    "page_title": "Admin surfaces",
+    "accessible_to_audit_reviewer": "no",
+    "purpose": "Restricted to admin/manager",
+    "key_components": "N/A",
+    "blocked_actions": "All",
+    "limitations": "Explicitly hidden; RLS + UI gates"
+  },
+  {
+    "route": "/studio/settings",
+    "page_title": "Settings",
+    "accessible_to_audit_reviewer": "no",
+    "purpose": "Requires manage_settings",
+    "key_components": "N/A",
+    "blocked_actions": "All",
+    "limitations": "Hidden from reviewer"
+  }
+]

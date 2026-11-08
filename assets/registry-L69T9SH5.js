@@ -1,0 +1,1 @@
+const e=new Map;function a(r){const{adapter:t}=r;if(!t.id)throw new Error("[MEF] Manufacturer adapter must declare `id`.");e.set(t.id,t)}function n(r){return e.get(r)}function u(){return Array.from(e.values())}export{n as g,u as l,a as r};

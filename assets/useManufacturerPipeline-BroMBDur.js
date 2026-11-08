@@ -1,0 +1,1 @@
+import{r as s}from"./index-BTJ-XG0F.js";import{g as l}from"./store-CYDzqoRY.js";function f(e){const t=l(),[a,o]=s.useState(()=>t.read(e));s.useEffect(()=>{o(t.read(e))},[e,t]);const c=s.useCallback(r=>{t.write(r),o(r)},[t]),i=s.useCallback(()=>o(t.read(e)),[e,t]);return{state:a,commit:c,reload:i}}export{f as u};

@@ -1,0 +1,1 @@
+import{j as n}from"./index-BTJ-XG0F.js";import{u as l}from"./session-Bp5SQgUY.js";function x({permission:s,mode:a="any",fallback:e=null,children:i}){const{permissions:o}=l(),t=Array.isArray(s)?s:[s],u=a==="all"?t.every(r=>o.has(r)):t.some(r=>o.has(r));return n.jsx(n.Fragment,{children:u?i:e})}export{x as C};

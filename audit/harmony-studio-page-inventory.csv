@@ -1,0 +1,24 @@
+route,page_title,accessible_to_audit_reviewer,purpose,key_components,blocked_actions,limitations
+/studio,Dashboard,yes,Consultant home / KPIs,"Pipeline, personal metrics, today, leaderboard",All write actions,None
+/studio/audit-access,Audit Reviewer Overview,yes,Audit landing page with role summary + test links,"Access lists, test links",N/A,Reviewer-only helper page
+/studio/products,Products,yes,Product catalog browse,"Grid, filters, search, brand facets",Edit/Delete/Import,None
+/studio/products/:slug,Product Detail,yes,Product spec + pricing + images,"Hero, specs, pricing rows, related","Edit fields, upload images",None
+/studio/brands,Brands,yes,Brand directory,"Brand cards, launch status",Configure brand,None
+/studio/brands/:slug,Brand Detail,yes,Single brand overview,"Products, readiness, collections",Edit brand,None
+/studio/collections,Collections,no,Not a distinct route in current build,N/A,N/A,Collections surface inside brand detail
+/studio/quotes,Quotes list,yes,All quotes (visible per RLS),Table + filters,Create/edit/delete quotes,Reviewer sees quotes they have permission to view only
+/studio/quotes/:id,Quote Detail,yes,Individual quote,"Line items, totals, pricing",Edit / send / print / delete,None
+/studio/quick-quote,Quick Quote,yes,Fast pricing tool,Configurator,Save/send quote,Configurations are read-only
+/studio/proposals,Proposals list,yes,All proposals,Table,Create/edit/delete/send,None
+/studio/proposals/:id,Proposal Editor,yes,Proposal viewer,"Sections, quote refs","Edit content, send, sign",Reviewer cannot save changes
+/studio/design-studio,Design Studio,yes,AI visualization workspace,"Projects, renders",Create/render,Render jobs blocked (write)
+/studio/design,Design Projects,yes,Project list,Cards,Create/edit,None
+/studio/knowledge,Knowledge Center,yes,Reference docs,Docs list,Upload/edit,None
+/studio/reports,Reports,yes,Sales / catalog reports,Charts,None,Some reports may require manage_reports
+/studio/operations,Operations,yes,Ops overview,"Tiles, feed",Edit ops rules,None
+/studio/orders,Orders,yes,Orders list,Table,Edit/create orders,Customer PII limited
+/studio/deliveries,Deliveries,yes,Delivery schedule,Calendar/table,Reschedule,None
+/studio/vendors,Vendors,yes,Vendor directory,Cards,Add/edit vendors,None
+/studio/inbox,Inbox,no,Requires messaging perms,N/A,All,Hidden from reviewer role
+/studio/admin/*,Admin surfaces,no,Restricted to admin/manager,N/A,All,Explicitly hidden; RLS + UI gates
+/studio/settings,Settings,no,Requires manage_settings,N/A,All,Hidden from reviewer

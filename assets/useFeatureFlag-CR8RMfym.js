@@ -1,0 +1,1 @@
+import{r as a}from"./index-BTJ-XG0F.js";import{i as n}from"./registry-DBBt-JGo.js";function f(r,e={}){const[s,o]=a.useState(!1);return a.useEffect(()=>{let t=!0;return n(r,e).then(u=>{t&&o(u)}),()=>{t=!1}},[r,e.userId,(e.roles??[]).join(",")]),s}export{f as u};

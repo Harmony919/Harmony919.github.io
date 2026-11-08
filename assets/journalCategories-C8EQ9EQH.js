@@ -1,0 +1,1 @@
+const o="Brands & Offers",s=["Sleep Science","Living Well","Rest & Recovery","Intentional Living","The Harmony Collection",o,"Mindset","Showroom & Events"],a=e=>e.toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,""),t=e=>s.find(n=>a(n)===e);export{o as B,s as J,t as f,a as s};

@@ -1,0 +1,1 @@
+import{a2 as s}from"./index-BTJ-XG0F.js";const e="https://rlwblirvkfhacoqrnhne.supabase.co",t="sb_publishable_DuuqKq2pPtyu1ZguHlVHxw_U9ptvwh4",a=s(e,t,{auth:{persistSession:!1,autoRefreshToken:!1,detectSessionInUrl:!1,storageKey:"sb-studio-public"}});export{a as s};

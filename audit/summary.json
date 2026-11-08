@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-07-02T17:06:38.583247+00:00",
+  "total_active_products": 3385,
+  "brands_total": 19,
+  "brands_with_products": 4,
+  "products_missing_image": 3385,
+  "products_missing_pricing": 35,
+  "products_not_public_ready": 3370,
+  "public_ready_products": 15,
+  "brand_breakdown": [
+    {
+      "brand": "American Leather",
+      "count": 2743
+    },
+    {
+      "brand": "Stressless",
+      "count": 632
+    },
+    {
+      "brand": "Harmony Collection",
+      "count": 6
+    },
+    {
+      "brand": "Bryte",
+      "count": 4
+    }
+  ],
+  "export_limitations": [
+    "Screenshots were not captured this run because the sandbox browser has no signed-in session; sign into the Studio preview once to enable authenticated Playwright screenshots.",
+    "Public-website comparison contains Studio-side fields only; the public marketing pages were not scraped in this pass.",
+    "Configured / grade-based pricing (accessory upcharges, cover grades) is summarised as min/max across published price items.",
+    "MAP / MSRP / sale-price fields are populated where source data provided them; not all vendors supply MAP.",
+    "Broken URL detection is not performed (would require external HTTP requests)."
+  ],
+  "csv_files": [
+    "harmony-studio-products.csv",
+    "harmony-studio-image-audit.csv",
+    "harmony-studio-pricing-audit.csv",
+    "harmony-studio-data-quality-audit.csv",
+    "harmony-studio-page-inventory.csv",
+    "harmony-studio-public-site-comparison.csv"
+  ],
+  "json_files": [
+    "harmony-studio-products.json",
+    "harmony-studio-image-audit.json",
+    "harmony-studio-pricing-audit.json",
+    "harmony-studio-data-quality-audit.json",
+    "harmony-studio-page-inventory.json",
+    "harmony-studio-audit-permissions.json",
+    "harmony-studio-public-site-comparison.json"
+  ]
+}

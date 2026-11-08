@@ -1,0 +1,1 @@
+import{j as r,n as s}from"./index-BTJ-XG0F.js";import{s as n}from"./score-C2J9lKsy.js";function a({severity:e}){return r.jsx("span",{className:s("inline-flex items-center rounded-full border px-2 py-0.5 text-[11px] font-medium uppercase tracking-wide",n(e)),children:e})}export{a as S};

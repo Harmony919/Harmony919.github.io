@@ -1,0 +1,1 @@
+import{j as o}from"./index-BTJ-XG0F.js";import{H as t}from"./HarmonyPromiseBanner-BzKyKxep.js";import{H as m}from"./HarmonyPromiseCard-DD2-T6K3.js";const f=({placement:e,enabled:n=!0,neutral:r=!1})=>n?e==="banner"?o.jsx(t,{neutral:r}):o.jsx(m,{neutral:r,tone:"cream"}):null;export{f as P};

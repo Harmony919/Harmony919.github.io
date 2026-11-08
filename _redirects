@@ -1,0 +1,32 @@
+# Explore and retired shop URLs leave this site for the Studio catalog.
+# Specific rules come before the /shop/* catch-all and the SPA fallback.
+/explore                     https://harmony919studio.com/explore                                          301!
+/explore/*                   https://harmony919studio.com/explore/:splat                                   301!
+/shop                        https://harmony919studio.com/explore                                          301!
+/shop/all                    https://harmony919studio.com/explore                                          301!
+/shop/selections             https://harmony919studio.com/explore                                          301!
+/shop/search                 https://harmony919studio.com/explore                                          301!
+/shop/p/*                    https://harmony919studio.com/explore/p/:splat                                 301!
+/shop/room/*                 https://harmony919studio.com/explore/room/:splat                              301!
+/shop/b/american-leather     https://harmony919studio.com/explore?brand=American%20Leather                 301!
+/shop/b/stressless           https://harmony919studio.com/explore?brand=Stressless                         301!
+/shop/b/harmony-collection   https://harmony919studio.com/explore?brand=Mattress%20Grove                   301!
+/shop/b/*                    https://harmony919studio.com/explore?brand=:splat                             301!
+/shop/c/sofas                https://harmony919studio.com/explore/room/living?category=sofas               301!
+/shop/c/sectionals           https://harmony919studio.com/explore/room/living?category=sectionals          301!
+/shop/c/chairs               https://harmony919studio.com/explore/room/living?category=chairs              301!
+/shop/c/sleepers             https://harmony919studio.com/explore/room/living?category=sleepers            301!
+/shop/c/livingroom           https://harmony919studio.com/explore/room/living?category=livingroom          301!
+/shop/c/mattress             https://harmony919studio.com/explore/room/mattresses?category=mattress        301!
+/shop/c/mattresses           https://harmony919studio.com/explore/room/mattresses?category=mattresses      301!
+/shop/c/bedroom              https://harmony919studio.com/explore/room/bedroom?category=bedroom            301!
+/shop/c/dining               https://harmony919studio.com/explore/room/dining?category=dining              301!
+/shop/c/accessories          https://harmony919studio.com/explore/room/accessories?category=accessories    301!
+/shop/c/art                  https://harmony919studio.com/explore/room/art?category=art                    301!
+/shop/c/rugs                 https://harmony919studio.com/explore/room/accessories?category=rugs           301!
+/shop/c/*                    https://harmony919studio.com/explore?category=:splat                          301!
+/shop/*                      https://harmony919studio.com/explore                                          301!
+/brands/rowe                 /furniture                                                                    301
+/brands/rowe/*               /furniture                                                                    301
+/furniture                   /furniture-apex-nc                                                            301
+/*                           /index.html                                                                   200

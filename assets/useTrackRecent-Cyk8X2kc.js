@@ -1,0 +1,1 @@
+import{r as a}from"./index-BTJ-XG0F.js";import{t as f}from"./recentlyViewed-DH_3uIf-.js";function d(s,e){const r=(e==null?void 0:e.id)??null,l=(e==null?void 0:e.label)??null,c=(e==null?void 0:e.sublabel)??void 0,o=(e==null?void 0:e.href)??"";a.useEffect(()=>{!r||!l||!o||f(s,{id:r,label:l,sublabel:c,href:o})},[s,r,l,c,o])}export{d as u};
